@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+*{
+    font-family: 'Montserrat', medium;
+    color: #3A3734; 
+}
+
+body
+{
+    background: #AEEBFF;
+}
+
+.loginInputs
+{
+    width: 320px;
+    height: 70px;
+    border-radius: 40px; 
+    border: 1px solid #3A3734;
+    padding-left: 20px;
+    outline: none;
+}
+
+.btn-dark
+{
+    width: 250px;
+    height: 70px;
+    outline: none;
+    border-radius: 40px; 
+    border: 1px solid #3A3734;
+}
+
+ul 
+{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+li 
+{
+    width: 250px;
+    list-style-type: none;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+a:link 
+{
+    text-decoration: none; 
+}
+
+a {
+    color: rgb(41, 39, 38);
+}
+
+.active-color 
+{
+    color: rgb(182, 182, 182);
+}
+
+a:hover 
+{
+    color: rgb(182, 182, 182);
+}
+
+.mainText 
+{
+    font-weight: 300;
+}
+
+.buttons-text-nurses-main 
+{
+    width: 480px;
+    font-weight: 300;
+    font-size: 30px;
+    padding: 0;
+    margin: 0;
+}
+
+.btn-light-nurses-main
+{
+    width: 320px;
+    height: 100px;
+    outline: none;
+    border-radius: 40px;
+    font-weight: 600;
+    background: #F1FFE8;
+    padding: 0;
+}
+
+.btn-light-nurses-main:hover
+{
+    background: rgb(247, 231, 231);
+}
+
+.btn-primary-modal
+{
+    width: 180px;
+    height: 60px;
+    outline: none;
+    border-radius: 40px;
+    font-weight: 600;
+    background: #AEEBFF;
+    padding: 0;
+}
+
+.btn-primary-modal:hover
+{
+    background: rgb(154, 204, 221);
+}
+
+.textInputModal
+{
+    width: 220px;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 0;
+    margin: 0;
+}
+
+.modalDivInputs
+{
+    margin-bottom: 15px;
+}
