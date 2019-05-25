@@ -33,7 +33,7 @@
             <div class="col-12 h-100 text-center">
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main">
-                        ПРОСМОТРЕТЬ
+                        <a href="dataOfManagersView.php"> ПРОСМОТРЕТЬ </a> 
                     </button>
                     <p class="buttons-text-nurses-main"> 
                         Чтобы просмотреть данные
@@ -44,8 +44,9 @@
                     
                 <br>
 
+                <!-- Кнопка, вызывающее модальное окно для добавления данных о новом менеджере -->
                 <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
+                    <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#addManagerModal">
                         ДОБАВИТЬ
                     </button>
                     <p class="buttons-text-nurses-main">
@@ -59,7 +60,7 @@
 
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main">
-                        РЕДАКТИРОВАТЬ
+                        <a href="dataOfManagersEdit.php"> РЕДАКТИРОВАТЬ </a>  
                     </button>
                     <p class="buttons-text-nurses-main">
                         Чтобы редактировать данные
@@ -74,6 +75,70 @@
         </div>
     </div>
 
+
+    <!-- Модальное окно для добавления данных о новом менеджере -->
+<div class="modal fade" id="addManagerModal" tabindex="-1" role="dialog" aria-labelledby="addManagerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="addManagerModalLabel">ДОБАВЛЕНИЕ ДАННЫХ О НОВОМ МЕНЕДЖЕРЕ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Андрей, отсюда данные должны отправляться в БД -->
+            <!-- Здесь поля, в которые заполняются данные о новом менеджере -->
+            <div class="modal-body d-flex flex-column">
+
+                <form method="POST">
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> КОНТАКТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ГРАФИК РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОКЛАД </p> 
+                        <input class="inputModal" type="text" list="<listOfNational>" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПРОЦЕНТ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФОРМА ДОПУСКА </p> 
+                        <input class="inputModal" type="text" list="<listOfFormAccess>" required>
+                        <datalist id="<listOfFormAccess>">
+                            <option value="Менеджер">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПАРОЛЬ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-modal"> ДОБАВИТЬ </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</div>
 
 
     <!-- Bootstrap JS -->
