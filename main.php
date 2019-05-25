@@ -31,8 +31,8 @@
         <div class="row h-100 w-100">
             <!-- Секция контента -->
             <div class="col-12 content h-100 text-center">
-                <h2 class="mainText"> Добро пожаловать! </h2>
-                <h2 class="mainText"> Для начала работы выберите нужный раздел в шапке сайта. </h2>
+                <h2 class="titleText"> Добро пожаловать! </h2>
+                <h2 class="titleText"> Для начала работы выберите нужный раздел в шапке сайта. </h2>
             </div>
         </div>
     </div>
