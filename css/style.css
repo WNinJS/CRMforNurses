@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 *{
     font-family: 'Montserrat', medium;
     color: #3A3734; 
@@ -63,9 +63,10 @@ a:hover
     color: rgb(182, 182, 182);
 }
 
-.mainText 
+.titleText 
 {
-    font-weight: 300;
+    font-size: 30px;
+    font-weight: 400;
 }
 
 .buttons-text-nurses-main 
@@ -121,4 +122,64 @@ a:hover
 .modalDivInputs
 {
     margin-bottom: 15px;
+}
+
+.hr-white 
+{
+    width: 100%;
+    background-color: #F1FFE8;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+}
+
+.find
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.find-input
+{
+    width: 770px;
+    height: 60px;
+    padding-left: 20px;
+}
+
+.find-btn
+{
+    width: 120px;
+    height: 60px;
+    outline: none;
+    border-radius: 40px;
+    background: #F1FFE8;
+    padding: 0;
+}
+
+.find-btn:hover
+{
+    background: rgb(247, 231, 231);
+}
+
+.font-title
+{
+    color: #929292;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.name-of-nurses
+{
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.name-of-nurses:link
+{
+    text-decoration: underline;
+}
+
+.th-width
+{
+    width: 220px;
 }
