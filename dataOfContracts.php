@@ -33,7 +33,7 @@
             <div class="col-12 h-100 text-center">
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main">
-                        ПРОСМОТРЕТЬ
+                        <a href="dataOfContractsView.php"> ПРОСМОТРЕТЬ </a> 
                     </button>
                     <p class="buttons-text-nurses-main"> 
                         Чтобы просмотреть данные
@@ -44,8 +44,9 @@
                 
                 <br>
 
+                <!-- Кнопка, вызывающее модальное окно для добавления данных о новом договоре -->
                 <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
+                    <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#addContractModal">
                         ДОБАВИТЬ
                     </button>
                     <p class="buttons-text-nurses-main">
@@ -59,7 +60,7 @@
 
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main">
-                        РЕДАКТИРОВАТЬ
+                        <a href="dataOfContractsEdit.php">  РЕДАКТИРОВАТЬ </a>
                     </button>
                     <p class="buttons-text-nurses-main">
                         Чтобы редактировать данные
@@ -84,6 +85,185 @@
 
         </div>
     </div>
+
+<!-- Модальное окно для добавления данных о новом договоре-->
+<div class="modal fade" id="addContractModal" tabindex="-1" role="dialog" aria-labelledby="addContractModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="addContractModalLabel">ДОБАВЛЕНИЕ ДАННЫХ О НОВОМ ДОГОВОРЕ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Здесь поля, в которые заполняются данные о новом договоре -->
+            <!-- Андрей, отсюда данные должны отправляться в БД -->
+            <!-- В двух последних инпутах, что относятся к договору (Менеджер и Сиделка) -->
+            <!-- Есть выпадающие списки, инфа этих списков должна браться с БД -->
+            <div class="modal-body d-flex flex-column">
+
+                <form method="POST">
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НОМЕР ДОГОВОРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО ЗАКАЗЧИКА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП. </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТЕЛЕФОН </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП.ДАННЫЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО ПОДОПЕЧНОГО </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ВОЗРАСТ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ЗАБОЛЕВАНИЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОСОБЕННОСТИ ПОДОП. </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> АДРЕС РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <!-- МАКС ТУТ НАД ПОРАБОТАТЬ -->
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СРОК ДЕЙСТВИЯ ДОГОВОРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ГРАФИК РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СУММА ДОГОВОРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОПЛАТА ПО ДОГОВОРУ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОЛЯ ОФИСА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СПОСОБ ПОСТУПЛЕНИЯ ДЕНЕГ </p> 
+                        <input class="inputModal" type="text" list="<listOfPay>" required>
+                        <datalist id="<listOfPay>">
+                            <option value="Наличные">
+                            <option value="Банковская карта">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТАРИФ </p> 
+                        <input class="inputModal" type="text" list="<listOfRate>" required>
+                        <datalist id="<listOfRate>">
+                            <option value="1%">
+                            <option value="2%">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОЛЯ СДЕЛКИ </p> 
+                        <input class="inputModal" type="text" list="<listOfMedicalEdu>" required>
+                        <datalist id="<listOfMedicalEdu>">
+                            <option value="Да">
+                            <option value="Нет">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> МЕНЕДЖЕР </p> 
+                        <input class="inputModal" type="text" list="<listOfManagers>" required>
+                        <datalist id="<listOfManagers>"">
+                            <option value="Логинов Игорь Сергеич"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СИДЕЛКА </p> 
+                        <input class="inputModal" type="text" list="<listOfNurses>" required>
+                        <datalist id="<listOfNurses>">
+                            <option value="Петрова Наталья Владимировна"></option>
+                        </datalist>
+                    </div>
+
+                    <br>
+
+                    <!-- Добавление данных о заказчике договора -->
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="addContractModalLabel">ДОБАВЛЕНИЕ ДАННЫХ О НОВОМ ДОГОВОРЕ</h5>
+                        </button>
+                    </div>
+
+                    <br>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО ЗАКАЗЧИКА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТЕЛЕФОН </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-modal"> ДОБАВИТЬ </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</div>
+
+
 
 
 
