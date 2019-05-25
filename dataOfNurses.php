@@ -33,7 +33,7 @@
             <div class="col-12 h-100 text-center">
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main">
-                        ПРОСМОТРЕТЬ
+                        <a href="dataOfNursesView.php">  ПРОСМОТРЕТЬ</a>
                     </button>
                     <p class="buttons-text-nurses-main"> 
                         Чтобы просмотреть данные
@@ -45,7 +45,7 @@
                 <br>
 
                 <div class="d-flex flex-row justify-content-around align-items-center">
-                    <!-- Вызывает модальное окно для добавления данных о новой сиделки -->
+                    <!-- Кнопка, вызывающая модальное окно для добавления данных о новой сиделке -->
                     <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#addNurseModal">
                         ДОБАВИТЬ
                     </button>
@@ -60,7 +60,7 @@
 
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main">
-                        РЕДАКТИРОВАТЬ
+                        <a href="dataOfNursesEdit.php"> РЕДАКТИРОВАТЬ </a> 
                     </button>
                     <p class="buttons-text-nurses-main">
                         Чтобы редактировать данные
@@ -83,7 +83,8 @@
                 </button>
             </div>
 
-            <!-- Здесь поля, в которые заполняются данные о новой сиделки -->
+            <!-- Андрей, отсюда данные должны отправляться в БД -->
+            <!-- Здесь поля, в которые заполняются данные о новой сиделке -->
             <div class="modal-body d-flex flex-column">
 
                 <form method="POST">
