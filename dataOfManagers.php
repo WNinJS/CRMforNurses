@@ -76,7 +76,7 @@
     </div>
 
 
-    <!-- Модальное окно для добавления данных о новом менеджере -->
+<!-- Модальное окно для добавления данных о новом менеджере -->
 <div class="modal fade" id="addManagerModal" tabindex="-1" role="dialog" aria-labelledby="addManagerModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
