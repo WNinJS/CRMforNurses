@@ -115,6 +115,11 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>  
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
                         <p class="textInputModal"> СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП. </p> 
                         <input class="inputModal" type="text" required>
                     </div>
@@ -166,12 +171,7 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СУММА ДОГОВОРА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ОПЛАТА ПО ДОГОВОРУ </p> 
+                        <p class="textInputModal"> ОБЩАЯ СУММА ДОГОВОРА </p> 
                         <input class="inputModal" type="text" required>
                     </div>
 
@@ -190,7 +190,7 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ТАРИФ </p> 
+                        <p class="textInputModal"> ОБЩИЙ ТАРИФ </p> 
                         <input class="inputModal" type="text" list="<listOfRate>" required>
                         <datalist id="<listOfRate>">
                             <option value="1%">
@@ -199,11 +199,11 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ДОЛЯ СДЕЛКИ </p> 
-                        <input class="inputModal" type="text" list="<listOfMedicalEdu>" required>
-                        <datalist id="<listOfMedicalEdu>">
-                            <option value="Да">
-                            <option value="Нет">
+                        <p class="textInputModal"> ТАРИФ СИДЕЛКИ </p> 
+                        <input class="inputModal" type="text" list="<listOfRate>" required>
+                        <datalist id="<listOfRate>">
+                            <option value="1%">
+                            <option value="2%">
                         </datalist>
                     </div>
 
@@ -228,30 +228,21 @@
                         </datalist>
                     </div>
 
-                    <br>
-
-                    <!-- Добавление данных о заказчике договора -->
-                    <div class="modal-header text-center">
-                        <h5 class="modal-title" id="addContractModalLabel">ДОБАВЛЕНИЕ ДАННЫХ О НОВОМ ДОГОВОРЕ</h5>
-                        </button>
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СИДЕЛКА(если требуется) </p> 
+                        <input class="inputModal" type="text" list="<listOfNurses>" required>
+                        <datalist id="<listOfNurses>">
+                            <option value="Петрова Наталья Владимировна"></option>
+                        </datalist>
                     </div>
 
                     <br>
 
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ФИО ЗАКАЗЧИКА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
 
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                    <!-- <div class="modalDivInputs d-flex flex-row justify-content-around">
                         <p class="textInputModal"> ТЕЛЕФОН </p> 
                         <input class="inputModal" type="text" required>
-                    </div>
+                    </div> -->
 
                 </div>
                 
