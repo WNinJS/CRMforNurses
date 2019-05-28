@@ -102,6 +102,14 @@
                         <p class="textInputModal"> ТЕЛЕФОН </p> 
                         <input class="inputModal" type="text" required>
                     </div>
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП. ТЕЛЕФОН (не обязательное поле) </p> 
+                        <input class="inputModal" type="text">
+                    </div>
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП. ТЕЛЕФОН (не обязательное поле) </p> 
+                        <input class="inputModal" type="text">
+                    </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
                         <p class="textInputModal"> НАЦИОНАЛЬНОСТЬ </p> 
@@ -131,7 +139,7 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> КОНТАКТНОЕ ЛИЦО </p> 
+                        <p class="textInputModal"> ДОП. КОНТАКТНЫЕ ДАННЫЕ</p> 
                         <input class="inputModal" type="text" required>
                     </div>
 
@@ -147,11 +155,6 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around">
                         <p class="textInputModal"> НАВЫКИ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ОТЗЫВ МЕНЕДЖЕРА </p> 
                         <input class="inputModal" type="text" required>
                     </div>
 
@@ -232,6 +235,12 @@
                             <option value="Нет">
                         </datalist>
                     </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОТЗЫВ МЕНЕДЖЕРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
                 </div>
                 
                 <div class="modal-footer">
