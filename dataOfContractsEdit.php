@@ -44,7 +44,7 @@
 
                 <p class="font-title"> ДОГОВОР </p>
                 <div class="d-flex flex-column align-items-center">
-                    <a class="name-of-nurses" href=""> ДОГОВОР №1 </a>
+                    <a class="name-of-nurses" data-toggle="modal" href="#editContractModal"> ДОГОВОР №1 </a>
                 </div>
 
             </div>
@@ -52,6 +52,175 @@
     </div>
 </div>
 
+
+<!-- Модальное окно для редактирования данных о новом договоре-->
+<div class="modal fade" id="editContractModal" tabindex="-1" role="dialog" aria-labelledby="editContractModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="editContractModalLabel">РЕДАКТИРОВАНИЕ ДАННЫХ О ДОГОВОРЕ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Здесь поля, в которых редактируются данные о договоре -->
+            <!-- Андрей, отсюда данные должны отправляться в БД -->
+            <!-- В двух последних инпутах, что относятся к договору (Менеджер и Сиделка) -->
+            <!-- Есть выпадающие списки, инфа этих списков должна браться с БД -->
+             <!-- Информация в них должна содержаться сразу при открытии этой модалки для удобства бабулек -->
+            <div class="modal-body d-flex flex-column">
+
+                <form method="POST">
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НОМЕР ДОГОВОРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО ЗАКАЗЧИКА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>  
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП. </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТЕЛЕФОН </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП.ДАННЫЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО ПОДОПЕЧНОГО </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ВОЗРАСТ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ЗАБОЛЕВАНИЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОСОБЕННОСТИ ПОДОП. </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> АДРЕС РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <!-- МАКС ТУТ НАД ПОРАБОТАТЬ -->
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СРОК ДЕЙСТВИЯ ДОГОВОРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ГРАФИК РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОБЩАЯ СУММА ДОГОВОРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОЛЯ ОФИСА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СПОСОБ ПОСТУПЛЕНИЯ ДЕНЕГ </p> 
+                        <input class="inputModal" type="text" list="<listOfPay>" required>
+                        <datalist id="<listOfPay>">
+                            <option value="Наличные">
+                            <option value="Банковская карта">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОБЩИЙ ТАРИФ </p> 
+                        <input class="inputModal" type="text" list="<listOfRate>" required>
+                        <datalist id="<listOfRate>">
+                            <option value="1%">
+                            <option value="2%">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТАРИФ СИДЕЛКИ </p> 
+                        <input class="inputModal" type="text" list="<listOfRate>" required>
+                        <datalist id="<listOfRate>">
+                            <option value="1%">
+                            <option value="2%">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> МЕНЕДЖЕР </p> 
+                        <input class="inputModal" type="text" list="<listOfManagers>" required>
+                        <datalist id="<listOfManagers>"">
+                            <option value="Логинов Игорь Сергеич"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СИДЕЛКА </p> 
+                        <input class="inputModal" type="text" list="<listOfNurses>" required>
+                        <datalist id="<listOfNurses>">
+                            <option value="Петрова Наталья Владимировна"></option>
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СИДЕЛКА(если требуется) </p> 
+                        <input class="inputModal" type="text" list="<listOfNurses>" required>
+                        <datalist id="<listOfNurses>">
+                            <option value="Петрова Наталья Владимировна"></option>
+                        </datalist>
+                    </div>
+
+                    <br>
+
+
+                    <!-- <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТЕЛЕФОН </p> 
+                        <input class="inputModal" type="text" required>
+                    </div> -->
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-modal"> РЕДАКТИРОВАТЬ </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</div>
 
 
     <!-- Bootstrap JS -->
