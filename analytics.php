@@ -32,7 +32,7 @@
             <!-- Кнопки и их описание -->
             <div class="col-12 h-100 text-center">
                 <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
+                    <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#generalProfitModal">
                         ОБЩАЯ ПРИБЫЛЬ ФИРМЫ
                     </button>
                     <p class="buttons-text-nurses-main"> 
@@ -44,7 +44,7 @@
                 <br>
 
                 <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
+                    <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#nurseProfitModal">
                         ПРИБЫЛЬ КОНКРЕТНОЙ СИДЕЛКИ
                     </button>
                     <p class="buttons-text-nurses-main">
@@ -56,7 +56,7 @@
                 <br>
 
                 <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
+                    <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#managerProfitModal">
                         РАСЧЁТ ЗАРПЛАТЫ МЕНЕДЖЕРА
                     </button>
                     <p class="buttons-text-nurses-main">
@@ -68,6 +68,143 @@
         </div>
     </div>
 
+
+<!-- Модальное окно, общая прибыль фирмы -->
+<div class="modal fade" id="generalProfitModal" tabindex="-1" role="dialog" aria-labelledby="generalProfitModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="generalProfitModalLabel">ОБЩАЯ ПРИБЫЛЬ ФИРМЫ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form method="POST" class="d-flex flex-column justify-content-center align-items-center">
+                    <p class="textTitle"> ПЕРИОД, ЗА КОТОРЫЙ НУЖНО РАСЧИТАТЬ ПРИБЫЛЬ </p> 
+                    <br>
+                    <div class="modalDivInputsAnalit d-flex flex-row justify-content-between">
+                        <p class="textInputModal"> НАЧАЛО </p> 
+                        <input class="inputModal" type="date" required>
+                    </div>
+
+                    <div class="modalDivInputsAnalit d-flex flex-row justify-content-between">
+                        <p class="textInputModal"> КОНЕЦ </p> 
+                        <input class="inputModal" type="date" required>
+                    </div> 
+                    <br>
+                    <button type="submit" class="btn btn-primary-modal"> РАСЧИТАТЬ </button>
+                </form>    
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+<!-- Модальное окно, прибыль конкретной сиделки -->
+<div class="modal fade" id="nurseProfitModal" tabindex="-1" role="dialog" aria-labelledby="nurseProfitModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="nurseProfitModalLabel">ПРИБЫЛЬ КОНКРЕТНОЙ СИДЕЛКИ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form method="POST" class="d-flex flex-column align-items-center">
+                    <p class="textTitle"> ПЕРИОД, ЗА КОТОРЫЙ НУЖНО РАСЧИТАТЬ ПРИБЫЛЬ </p> 
+
+                    <br>
+                    
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> НАЧАЛО </p> 
+                        <input class="inputModal" type="date" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> КОНЕЦ </p> 
+                        <input class="inputModal" type="date" required>
+                    </div> 
+
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> ФИО </p> 
+                        <input class="inputModalSmall" type="text" list="<listOfNurses>" required>
+                        <datalist id="<listOfNurses>">
+                            <option value="Петрова Наталья Владимировна"></option>
+                        </datalist> 
+                    </div> 
+
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> МЕСТО РАБОТЫ </p> 
+                        <input class="inputModalSmall" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> ПОДОПЕЧНЫЙ </p> 
+                        <input class="inputModalSmall" list="<listOfClient>" required>
+                        <datalist id="<listOfClient>">
+                            <option value="Ускова Наталья Владимировна"></option>
+                        </datalist> 
+                    </div> 
+
+                    <br>
+
+                    <button type="submit" class="btn btn-primary-modal"> РАСЧИТАТЬ </button>
+                </form>    
+            </div>
+        </div>
+    </div>
+</div>    
+
+
+
+<!-- Модальное окно, расчет зарплаты менеджера -->
+<div class="modal fade" id="managerProfitModal" tabindex="-1" role="dialog" aria-labelledby="managerProfitModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="managerProfitModalLabel">РАСЧЕТ ЗАРПЛАТЫ МЕНЕДЖЕРА</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <div class="modal-body">
+                <form method="POST" class="d-flex flex-column align-items-center">
+                    <p class="textTitle"> ПЕРИОД, ЗА КОТОРЫЙ НУЖНО РАСЧИТАТЬ ПРИБЫЛЬ </p> 
+                    <br>
+                    <div class="modalDivInputs d-flex flex-row justify-content-between">
+                        <p class="textInputModal"> НАЧАЛО </p> 
+                        <input class="inputModal" type="date" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-between">
+                        <p class="textInputModal"> КОНЕЦ </p> 
+                        <input class="inputModal" type="date" required>
+                    </div> 
+
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> ФИО </p> 
+                        <input class="inputModalSmall" type="text" list="<listOfManagers>" required>
+                        <datalist id="<listOfManagers>">
+                            <option value="Логинов Игорь Сергеич"></option>
+                        </datalist> 
+                    </div> 
+
+                    <div class="modalDivInputs d-flex justify-content-around">
+                        <p class="textInputModal"> ПРОЦЕНТ ПО ДОГОВОРУ </p> 
+                        <input class="inputModalSmall" type="text" required>
+                    </div> 
+                    <br>
+                    <button type="submit" class="btn btn-primary-modal"> РАСЧИТАТЬ </button>
+                </form>    
+            </div>
+        </div>
+    </div>
+</div>    
 
 
     <!-- Bootstrap JS -->
