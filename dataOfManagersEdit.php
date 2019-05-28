@@ -34,7 +34,9 @@
                 <h2 class="titleText"> РЕДАКТИРОВАНИЕ ДАННЫХ О МЕНЕДЖЕРАХ</h2>
                 
                 <br>
+
                 <hr class="hr-white">
+
                 <form class="find" method="POST d-flex justify-content-around">
                     <input type="text" class="find-input" placeholder="Введите фио менеджера для поиска конкретной информации">
                     <button class="btn find-btn"> <img src="/images/findIcon.png" alt="find" style="width: 31px; heigth: 31px;"> </button>
@@ -44,10 +46,75 @@
 
                 <p class="font-title"> ФИО МЕНЕДЖЕРА </p>
                 <div class="d-flex flex-column align-items-center">
-                    <a class="name-of-nurses" href=""> ЛОГИНОВ ИГОРЬ СЕРГЕИЧ </a>
+                    <a class="name-of-nurses" data-toggle="modal" href="#editManagerModal"> ЛОГИНОВ ИГОРЬ СЕРГЕИЧ </a>
                 </div>
 
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Модальное окно для редактирования данных о выбранном менеджере -->
+<div class="modal fade" id="editManagerModal" tabindex="-1" role="dialog" aria-labelledby="editManagerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="editManagerModalLabel">РЕДАКТИРОВАНИЕ ДАННЫХ О МЕНЕДЖЕРЕ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Андрей, отсюда данные должны отправляться в БД -->
+            <!-- Здесь поля, в которых редактируются данные о менеджере-->
+            <!-- Информация в них должна содержаться сразу при открытии этой модалки для удобства бабулек -->
+            <div class="modal-body d-flex flex-column">
+
+                <form method="POST">
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> КОНТАКТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ГРАФИК РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОКЛАД </p> 
+                        <input class="inputModal" type="text" list="<listOfNational>" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПРОЦЕНТ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФОРМА ДОПУСКА </p> 
+                        <input class="inputModal" type="text" list="<listOfFormAccess>" required>
+                        <datalist id="<listOfFormAccess>">
+                            <option value="Менеджер">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПАРОЛЬ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-modal"> РЕДКАТИРОВАТЬ </button>
+                </div>
+            </form>    
         </div>
     </div>
 </div>
