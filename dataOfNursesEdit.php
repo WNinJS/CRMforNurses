@@ -44,7 +44,7 @@
 
                 <p class="font-title"> ФИО СИДЕЛКИ </p>
                 <div class="d-flex flex-column align-items-center">
-                    <a class="name-of-nurses" href=""> Петрова Наталья Владимировна </a>
+                    <a class="name-of-nurses" data-toggle="modal" href="#editNurseModal"> Петрова Наталья Владимировна </a>
                 </div>
 
             </div>
@@ -54,11 +54,191 @@
 
 
 
+<!-- Модальное окно для добавления данных о новой сиделке -->
+<div class="modal fade" id="editNurseModal" tabindex="-1" role="dialog" aria-labelledby="editNurseModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h5 class="modal-title" id="editNurseModalLabel">ДОБАВЛЕНИЕ ДАННЫХ О НОВОЙ СИДЕЛКЕ</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <!-- Андрей, отсюда данные должны отправляться в БД -->
+            <!-- Здесь поля, в которых редактируются данные о выбранной сиделке -->
+             <!-- Информация в них должна содержаться сразу при открытии этой модалки для удобства бабулек -->
+            <div class="modal-body d-flex flex-column">
+
+                <form method="POST">
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ФИО </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ВОЗРАСТ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ТЕЛЕФОН </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП. ТЕЛЕФОН (не обязательное поле) </p> 
+                        <input class="inputModal" type="text">
+                    </div>
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП. ТЕЛЕФОН (не обязательное поле) </p> 
+                        <input class="inputModal" type="text">
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НАЦИОНАЛЬНОСТЬ </p> 
+                        <input class="inputModal" type="text" list="<listOfNational>" required>
+                        <datalist id="<listOfNational>">
+                            <option value="Русский(ая)">
+                            <option value="Башкир(ка)">
+                            <option value="Татар(ка)">
+                            <option value="Дагестанец(ка)">
+                            <option value="Армянин(ка)">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> АДРЕС ПРОЖИВАНИЯ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> АДРЕС ПРОПИСКИ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ДОП. КОНТАКТНЫЕ ДАННЫЕ</p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОПЫТ РАБОТЫ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> С КАКИМИ ЗАБОЛЕВАНИЯМИ РАБОТАЛ(А) </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НАВЫКИ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> СТАТУС СИДЕЛКИ </p> 
+                        <input class="inputModal" type="text" list="<listOfStatus>" required>
+                        <datalist id="<listOfStatus>">
+                            <option value="Работает">
+                            <option value="Свободен(на)">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ЗНАНИЕ ЯЗЫКА </p> 
+                        <input class="inputModal" type="text" list="<listOfLang>" required>
+                        <datalist id="<listOfLang>">
+                            <option value="Татарский">
+                            <option value="Башкирский">
+                            <option value="Дагестанский">
+                            <option value="Армянский">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ВЕРОИСПОВЕДАНИЕ </p> 
+                        <input class="inputModal" type="text" list="<listOfBelieve>" required>
+                        <datalist id="<listOfBelieve>">
+                            <option value="Христианство">
+                            <option value="Ислам">
+                            <option value="Иудаизм">
+                            <option value="Буддизм">
+                            <option value="Атеизм">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НАЛИЧИЕ СПРАВОК О НЕСУДИМОСТИ </p> 
+                        <input class="inputModal" type="text" list="<listOfCrimeInfo>" required>
+                        <datalist id="<listOfCrimeInfo>">
+                            <option value="Да">
+                            <option value="Нет">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НАЛИЧИЕ САН.КНИЖКИ ИЛИ МЕД.СПРАВОК </p> 
+                        <input class="inputModal" type="text" list="<listOfMedicalInfo>" required>
+                        <datalist id="<listOfMedicalInfo>">
+                            <option value="Да">
+                            <option value="Нет">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> НАЛИЧИЕ МЕД. ОБРАЗОВАНИЯ </p> 
+                        <input class="inputModal" type="text" list="<listOfMedicalEdu>" required>
+                        <datalist id="<listOfMedicalEdu>">
+                            <option value="Да">
+                            <option value="Нет">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> БАНКОВКАЯ КАРТА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ИНФОРМАЦИЯ О ПРОХОЖДЕНИИ КУРСОВ </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ВОЗМОЖНОСТЬ РАБОТЫ С ДЕТЬМИ </p> 
+                        <input class="inputModal" type="text" list="<listOfWorkWithChild>" required>
+                        <datalist id="<listOfWorkWithChild>">
+                            <option value="Да">
+                            <option value="Нет">
+                        </datalist>
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around">
+                        <p class="textInputModal"> ОТЗЫВ МЕНЕДЖЕРА </p> 
+                        <input class="inputModal" type="text" required>
+                    </div>
+
+                </div>
+                
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary-modal"> РЕДАКТИРОВАТЬ </button>
+                </div>
+            </form>    
+        </div>
+    </div>
+</div>
 
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+<!-- Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
