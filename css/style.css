@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 *{
     font-family: 'Montserrat', medium;
-    color: #3A3734; 
+    color: black;
 }
 
 body
@@ -50,23 +50,25 @@ a:link
 }
 
 a {
-    color: rgb(41, 39, 38);
+    color: black;
 }
 
-.active-color 
+.active-color:link 
 {
-    color: rgb(182, 182, 182);
+    color: black;
+    text-decoration: underline;
 }
 
 a:hover 
 {
-    color: rgb(182, 182, 182);
+    color: black;
+    text-decoration: underline;
 }
 
 .titleText 
 {
     font-size: 30px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 .buttons-text-nurses-main 
@@ -114,9 +116,10 @@ a:hover
 {
     width: 220px;
     font-size: 20px;
-    font-weight: 300;
+    font-weight: 600;
     padding: 0;
     margin: 0;
+    margin-right: 40px;
 }
 
 .modalDivInputs
@@ -163,7 +166,7 @@ a:hover
 
 .font-title
 {
-    color: #929292;
+    color: black;
     font-size: 24px;
     font-weight: 400;
 }
@@ -176,10 +179,27 @@ a:hover
 
 .name-of-nurses:link
 {
+    text-decoration: none;
+}
+
+
+.name-of-nurses:hover
+{
     text-decoration: underline;
 }
+
 
 .th-width
 {
     width: 220px;
+}
+
+.modalDivInputsAnalit
+{
+    margin-bottom: 15px;
+    width: 320px;
+}
+
+.inputModalSmall {
+    width: 184px;
 }
