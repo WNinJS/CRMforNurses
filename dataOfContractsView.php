@@ -82,6 +82,11 @@
                     </tr>
 
                     <tr>
+                        <th scope="row th-width">ПАСПОРТНЫЕ ДАННЫЕ</th>
+                        <td>Данные вытащить из базы данных</td>
+                    </tr>
+
+                    <tr>
                         <th scope="row th-width">СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП.</th>
                         <td>Данные вытащить из базы данных</td>
                     </tr>
@@ -132,12 +137,7 @@
                     </tr>
 
                     <tr>
-                        <th scope="row th-width">СУММА ДОГОВОРА</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ОПЛАТА ПО ДОГОВОРУ</th>
+                        <th scope="row th-width">ОБЩАЯ СУММА ДОГОВОРА</th>
                         <td>Данные вытащить из базы данных</td>
                     </tr>
 
@@ -152,12 +152,12 @@
                     </tr>
 
                     <tr>
-                        <th scope="row th-width">ТАРИФ</th>
+                        <th scope="row th-width">ОБЩИЙ ТАРИФ</th>
                         <td>Данные вытащить из базы данных</td>
                     </tr>
 
                     <tr>
-                        <th scope="row th-width">ДОЛЯ СДЕЛКИ</th>
+                        <th scope="row th-width">ТАРИФ СДЕЛКИ</th>
                         <td>Данные вытащить из базы данных</td>
                     </tr>
 
@@ -173,44 +173,14 @@
 
                     <tr>
                         <th scope="row th-width">СИДЕЛКА</th>
-                        <td>Данные вытащить из базы данных</td>
+                        <td>Одна или несколько в зависимости от заполненных данных
+                            Данные вытащить из базы данных</td>
                     </tr>
 
                 </tbody>
             </table>
 
             <br>
-
-            <!-- Добавление данных о заказчике договора -->
-            <div class="modal-header text-center">
-                <h5 class="modal-title" id="addContractModalLabel">ДАННЫЕ О ЗАКАЗЧИКЕ</h5>
-                </button>
-            </div>
-
-            <br>
-
-            <table class="table table-hover">
-                <tbody>
-
-                    <tr>
-                        <th scope="row th-width">НОМЕР ДОГОВОРА</th>
-                        <td>1</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ФИО ЗАКАЗЧИКА</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП.</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-
                 
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary-modal" data-dismiss="modal" aria-label="Close"> ЗАКРЫТЬ </button>
