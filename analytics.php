@@ -16,7 +16,7 @@
 <body>
     <!-- ШАПКА -->
     <nav class="navbar navbar-expand-md d-flex justify-content-center w-100" style="height: 200px; background: #F1FFE8;">
-        <ul class="d-flex justify-content-between text-center w-100">
+        <ul class="hideMenu d-flex justify-content-between text-center w-100">
             <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfNurses.php"> ДАННЫЕ О СИДЕЛКАХ </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfContracts.php"> ДАННЫЕ О ДОГОВОРАХ </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
@@ -39,10 +39,6 @@
                     <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#generalProfitModal">
                         ОБЩАЯ ПРИБЫЛЬ ФИРМЫ
                     </button>
-                    <p class="buttons-text-nurses-main"> 
-                        Чтобы посчитать общую прибыль фирмы,
-                        нажмите на кнопку "общая прибыль фирмы"
-                    </p>
                 </div>
                 
                 <br>
@@ -51,10 +47,6 @@
                     <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#nurseProfitModal">
                         ПРИБЫЛЬ КОНКРЕТНОЙ СИДЕЛКИ
                     </button>
-                    <p class="buttons-text-nurses-main">
-                        Чтобы посчитать прибыль конкретной сиделки,
-                        нажмите на кнопку "прибыль конкретной сиделки"
-                    </p>
                 </div>
 
                 <br>
@@ -63,10 +55,6 @@
                     <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#managerProfitModal">
                         РАСЧЁТ ЗАРПЛАТЫ МЕНЕДЖЕРА
                     </button>
-                    <p class="buttons-text-nurses-main">
-                        Чтобы расчитать зарплату менеджера,
-                        нажмите на кнопку "расчёт зарплаты менеджера"
-                    </p>
                 </div>
             </div>
         </div>
