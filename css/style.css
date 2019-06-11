@@ -38,9 +38,8 @@ li
 {
     width: 250px;
     list-style-type: none;
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 
@@ -62,7 +61,7 @@ a {
 a:hover 
 {
     color: black;
-    text-decoration: underline;
+    border-bottom: 2px solid;
 }
 
 .titleText 
@@ -206,11 +205,27 @@ a:hover
 
 .inputModal 
 {
-    width: 200px;
+    width: 300px;
     height: 50px;
 }
 
 .formSize
 {
     width: 600px;
+}
+
+.photoOfNurse
+{
+    width: 400px;
+    height: 300px;
+    margin-right: 20px;
+}
+
+.textProfile
+{
+    font-size: 26px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+    margin-right: 40px;
 }
