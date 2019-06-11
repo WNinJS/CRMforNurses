@@ -11,22 +11,30 @@
     <!-- My Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title> Просмотр данных о сиделке </title>
+    <title> Просмотр данных сиделки </title>
 </head>
 <body>
     <!-- ШАПКА -->
-    <nav class="navbar navbar-expand-md d-flex justify-content-center w-100" style="height: 200px; background: #F1FFE8;">
-        <ul class="d-flex justify-content-between text-center w-100">
-            <li class="d-flex flex-column justify-content-center"><a class="active-color" href="dataOfNurses.php"> ДАННЫЕ О СИДЕЛКАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfContracts.php"> ДАННЫЕ О ДОГОВОРАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
-            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
-                <p class="p-0 m-0"> Имя </p>
-                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
-            </form>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+
+        <div class="collapse navbar-collapse w-100 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center w-100 p-0 m-0">
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfNurses.php"> СИДЕЛКИ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ДОГОВОРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> АНАЛИТИКА </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> МЕНЕДЖЕРЫ </a></li>
+                <li class="navbar-item-active d-flex justify-content-center"> 
+                    <p class="d-flex align-items-center m-0"> Имя </p>
+                    <a class="nav-link" href="login.php"> 
+                        <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> 
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <br>
@@ -149,7 +157,20 @@
                         </tr>
                     </tbody>
                 </table>
+                <br>
                 <hr class="hr-white">
+                <br>
+                <div class="footer d-flex justify-content-center">
+                    <button class="btn btn-light-nurses-main" onclick="goToProfile()">
+                        <script type="text/javascript">
+                            function goToProfile()
+                            {
+                                location.href="nurseProfile.php"
+                            }
+                        </script>
+                        ПРОСМОТРЕТЬ АНКЕТУ
+                    </button>
+                </div>
                 <br>
             </div>
         </div>
