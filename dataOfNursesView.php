@@ -22,6 +22,10 @@
             <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
+            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
+                <p class="p-0 m-0"> Имя </p>
+                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
+            </form>
         </ul>
     </nav>
 
@@ -46,7 +50,7 @@
                 <!-- По нажатию на кнопку с именем, появляется модальное окно с подробной информацией о том, на кого кликнули -->
                 <p class="font-title"> ФИО СИДЕЛКИ </p>
                 <div class="d-flex flex-column align-items-center">
-                    <a class="name-of-nurses" href="#viewNurseModal" data-toggle="modal"> Петрова Наталья Владимировна </a>
+                    <a class="name-of-nurses" href="dataOfNursesViewWhich.php"> Петрова Наталья Владимировна </a>
                 </div>
 
             </div>
@@ -60,7 +64,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center">
-                <h5 class="modal-title" id="viewNurseModalLabel">ПРОСМОТР ДАННЫХ О МЕНЕДЖЕРЕ</h5>
+                <h5 class="modal-title" id="viewNurseModalLabel">ПРОСМОТР ДАННЫХ О СИДЕЛКЕ</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
