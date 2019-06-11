@@ -203,3 +203,14 @@ a:hover
 .inputModalSmall {
     width: 184px;
 }
+
+.inputModal 
+{
+    width: 200px;
+    height: 50px;
+}
+
+.formSize
+{
+    width: 600px;
+}
