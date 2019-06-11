@@ -22,6 +22,10 @@
             <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="active-color" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
+            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
+                <p class="p-0 m-0"> Имя </p>
+                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
+            </form>
         </ul>
     </nav>
 
@@ -31,42 +35,39 @@
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
             <div class="col-12 h-100 text-center">
-                <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
-                        <a href="dataOfManagersView.php"> ПРОСМОТРЕТЬ </a> 
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="btn btn-light-nurses-main" onclick="goToViewManagers()">
+                        <script type="text/javascript">
+                            function goToViewManagers() 
+                            { 
+                                location.href = "dataOfManagersView.php" 
+                            }; 
+                        </script> 
+                        ПРОСМОТРЕТЬ
                     </button>
-                    <p class="buttons-text-nurses-main"> 
-                        Чтобы просмотреть данные
-                        о менеджерах, нажмите на кнопку
-                        "просмотреть"
-                    </p>
                 </div>
                     
                 <br>
 
                 <!-- Кнопка, вызывающее модальное окно для добавления данных о новом менеджере -->
-                <div class="d-flex flex-row justify-content-around align-items-center">
+                <div class="d-flex flex-row justify-content-center">
                     <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#addManagerModal">
                         ДОБАВИТЬ
                     </button>
-                    <p class="buttons-text-nurses-main">
-                        Чтобы добавить новые данные
-                        о менеджерах, нажмите на кнопку
-                        "редактировать"
-                    </p>
                 </div>
 
                 <br>
 
-                <div class="d-flex flex-row justify-content-around align-items-center">
-                    <button class="btn btn-light-nurses-main">
-                        <a href="dataOfManagersEdit.php"> РЕДАКТИРОВАТЬ </a>  
+                <div class="d-flex flex-row justify-content-center">
+                    <button class="btn btn-light-nurses-main" onclick="goToEditManagers()">
+                        <script type="text/javascript"> 
+                            function goToEditManagers() 
+                            { 
+                                location.href = "dataOfManagersEdit.php" 
+                            }; 
+                        </script> 
+                        РЕДАКТИРОВАТЬ
                     </button>
-                    <p class="buttons-text-nurses-main">
-                        Чтобы редактировать данные
-                        о менеджерах, нажмите на кнопку
-                        "добавить"
-                    </p>
                 </div>
 
                 <br>
