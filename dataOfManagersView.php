@@ -11,22 +11,30 @@
     <!-- My Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title> Просмотр данных о менеджерах </title>
+    <title> Просмотр данных менеджеров </title>
 </head>
 <body>
     <!-- ШАПКА -->
-    <nav class="navbar navbar-expand-md d-flex justify-content-center w-100" style="height: 200px; background: #F1FFE8;">
-        <ul class="d-flex justify-content-between text-center w-100">
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfNurses.php"> ДАННЫЕ О СИДЕЛКАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfContracts.php"> ДАННЫЕ О ДОГОВОРАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="active-color" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
-            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
-                <p class="p-0 m-0"> Имя </p>
-                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
-            </form>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+
+        <div class="collapse navbar-collapse w-100 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center w-100 p-0 m-0">
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfNurses.php"> СИДЕЛКИ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ДОГОВОРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> АНАЛИТИКА </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> МЕНЕДЖЕРЫ </a></li>
+                <li class="navbar-item-active d-flex justify-content-center"> 
+                    <p class="d-flex align-items-center m-0"> Имя </p>
+                    <a class="nav-link" href="login.php"> 
+                        <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> 
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <br>
@@ -50,77 +58,12 @@
                 <!-- По нажатию на кнопку с именем, появляется модальное окно с подробной информацией о том, на кого кликнули -->
                 <p class="font-title"> ФИО МЕНЕДЖЕРА </p>
                 <div class="d-flex flex-column align-items-center">
-                    <a class="name-of-nurses" data-toggle="modal" href="#viewManagerModal"> ЛОГИНОВ ИГОРЬ СЕРГЕИЧ </a>
+                    <a class="name-of-nurses" href="dataOfManagersViewWhich.php"> ЛОГИНОВ ИГОРЬ СЕРГЕИЧ </a>
                 </div>
-
             </div>
         </div>
     </div>
 </div>
-
-
-<!-- Модальное окно для просмотра данных о менеджере -->
-<div class="modal fade" id="viewManagerModal" tabindex="-1" role="dialog" aria-labelledby="viewManagerModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h5 class="modal-title" id="viewManagerModalLabel">ПРОСМОТР ДАННЫХ О МЕНЕДЖЕРЕ</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <!-- Андрей, здесь должны данные выводится с БД -->
-            <div class="modal-body d-flex flex-column">
-
-            <table class="table table-hover">
-                <tbody>
-                    <tr>
-                        <th scope="row th-width">ФИО</th>
-                        <td>Логинов Игорь Сергеич</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">КОНТАКТЫ</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ГРАФИК РАБОТЫ</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ОКЛАД</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ПРОЦЕНТ</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ФОРМА ДОПУСКА</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                    <tr>
-                        <th scope="row th-width">ПАРОЛЬ</th>
-                        <td>Данные вытащить из базы данных</td>
-                    </tr>
-
-                </tbody>
-            </table>
-                
-            <div class="modal-footer">
-                <button type="submit" class="btn btn-primary-modal" data-dismiss="modal" aria-label="Close"> ЗАКРЫТЬ </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
