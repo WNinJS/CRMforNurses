@@ -22,6 +22,10 @@
             <li class="d-flex flex-column justify-content-center"><a class="active-color" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
             <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
+            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
+                <p class="p-0 m-0"> Имя </p>
+                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
+            </form>
         </ul>
     </nav>
 
