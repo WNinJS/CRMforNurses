@@ -15,18 +15,26 @@
 </head>
 <body>
     <!-- ШАПКА -->
-    <nav class="navbar navbar-expand-md d-flex justify-content-center w-100" style="height: 200px; background: #F1FFE8;">
-        <ul class="d-flex justify-content-between text-center w-100">
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfNurses.php"> ДАННЫЕ О СИДЕЛКАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="active-color" href="dataOfContracts.php"> ДАННЫЕ О ДОГОВОРАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
-            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
-                <p class="p-0 m-0"> Имя </p>
-                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
-            </form>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+
+        <div class="collapse navbar-collapse w-100 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center w-100 p-0 m-0">
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfNurses.php"> СИДЕЛКИ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ДОГОВОРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> АНАЛИТИКА </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> МЕНЕДЖЕРЫ </a></li>
+                <li class="navbar-item-active d-flex justify-content-center"> 
+                    <p class="d-flex align-items-center m-0"> Имя </p>
+                    <a class="nav-link" href="login.php"> 
+                        <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> 
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <br>
@@ -51,7 +59,13 @@
 
                 <!-- Кнопка, вызывающее модальное окно для добавления данных о новом договоре -->
                 <div class="d-flex flex-row justify-content-center">
-                    <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#addContractModal">
+                    <button class="btn btn-light-nurses-main" onclick="goToContractsAdd()">
+                    <script type="text/javascript">
+                        function goToContractsAdd()
+                        {
+                            location.href = "dataOfContractsAdd.php"
+                        }   
+                    </script>
                         ДОБАВИТЬ
                     </button>
                 </div>
@@ -81,178 +95,6 @@
 
         </div>
     </div>
-
-<!-- Модальное окно для добавления данных о новом договоре-->
-<div class="modal fade" id="addContractModal" tabindex="-1" role="dialog" aria-labelledby="addContractModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header text-center">
-                <h5 class="modal-title" id="addContractModalLabel">ДОБАВЛЕНИЕ ДАННЫХ О НОВОМ ДОГОВОРЕ</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-
-            <!-- Здесь поля, в которые заполняются данные о новом договоре -->
-            <!-- Андрей, отсюда данные должны отправляться в БД -->
-            <!-- В двух последних инпутах, что относятся к договору (Менеджер и Сиделка) -->
-            <!-- Есть выпадающие списки, инфа этих списков должна браться с БД -->
-            <div class="modal-body d-flex flex-column">
-
-                <form method="POST">
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> НОМЕР ДОГОВОРА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ФИО ЗАКАЗЧИКА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>  
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП. </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ТЕЛЕФОН </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ДОП.ДАННЫЕ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ФИО ПОДОПЕЧНОГО </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ВОЗРАСТ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ЗАБОЛЕВАНИЕ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ОСОБЕННОСТИ ПОДОП. </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> АДРЕС РАБОТЫ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <!-- МАКС ТУТ НАД ПОРАБОТАТЬ -->
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СРОК ДЕЙСТВИЯ ДОГОВОРА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ГРАФИК РАБОТЫ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ОБЩАЯ СУММА ДОГОВОРА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ДОЛЯ ОФИСА </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СПОСОБ ПОСТУПЛЕНИЯ ДЕНЕГ </p> 
-                        <input class="inputModal" type="text" list="<listOfPay>" required>
-                        <datalist id="<listOfPay>">
-                            <option value="Наличные">
-                            <option value="Банковская карта">
-                        </datalist>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ОБЩИЙ ТАРИФ </p> 
-                        <input class="inputModal" type="text" list="<listOfRate>" required>
-                        <datalist id="<listOfRate>">
-                            <option value="1%">
-                            <option value="2%">
-                        </datalist>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ТАРИФ СИДЕЛКИ </p> 
-                        <input class="inputModal" type="text" list="<listOfRate>" required>
-                        <datalist id="<listOfRate>">
-                            <option value="1%">
-                            <option value="2%">
-                        </datalist>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ </p> 
-                        <input class="inputModal" type="text" required>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> МЕНЕДЖЕР </p> 
-                        <input class="inputModal" type="text" list="<listOfManagers>" required>
-                        <datalist id="<listOfManagers>"">
-                            <option value="Логинов Игорь Сергеич"></option>
-                        </datalist>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СИДЕЛКА </p> 
-                        <input class="inputModal" type="text" list="<listOfNurses>" required>
-                        <datalist id="<listOfNurses>">
-                            <option value="Петрова Наталья Владимировна"></option>
-                        </datalist>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> СИДЕЛКА(если требуется) </p> 
-                        <input class="inputModal" type="text" list="<listOfNurses>" required>
-                        <datalist id="<listOfNurses>">
-                            <option value="Петрова Наталья Владимировна"></option>
-                        </datalist>
-                    </div>
-
-                    <br>
-
-
-                    <!-- <div class="modalDivInputs d-flex flex-row justify-content-around">
-                        <p class="textInputModal"> ТЕЛЕФОН </p> 
-                        <input class="inputModal" type="text" required>
-                    </div> -->
-
-                </div>
-                
-                <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary-modal"> ДОБАВИТЬ </button>
-                </div>
-            </form>    
-        </div>
-    </div>
-</div>
-
-
-
-
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
