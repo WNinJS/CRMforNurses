@@ -11,22 +11,30 @@
     <!-- My Style CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-    <title> Просмотр данных о сиделке </title>
+    <title> Редактирование данных сиделки </title>
 </head>
 <body>
     <!-- ШАПКА -->
-    <nav class="navbar navbar-expand-md d-flex justify-content-center w-100" style="height: 200px; background: #F1FFE8;">
-        <ul class="d-flex justify-content-between text-center w-100">
-            <li class="d-flex flex-column justify-content-center"><a class="active-color" href="dataOfNurses.php"> ДАННЫЕ О СИДЕЛКАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfContracts.php"> ДАННЫЕ О ДОГОВОРАХ </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="analytics.php"> АНАЛИТИКА </a></li>
-            <li class="d-flex flex-column justify-content-center"><a class="" href="dataOfManagers.php"> ДАННЫЕ О МЕНЕДЖЕРАХ </a></li>
-            <form class="d-flex align-items-center justify-content-center" style="padding-left: 20px;" method="get">
-                <p class="p-0 m-0"> Имя </p>
-                <a href="login.php"> <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> </a>
-            </form>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">&#9776;</span>
+        </button>
+
+        <div class="collapse navbar-collapse w-100 " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center w-100 p-0 m-0">
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfNurses.php"> СИДЕЛКИ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ДОГОВОРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> АНАЛИТИКА </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> МЕНЕДЖЕРЫ </a></li>
+                <li class="navbar-item-active d-flex justify-content-center"> 
+                    <p class="d-flex align-items-center m-0"> Имя </p>
+                    <a class="nav-link" href="login.php"> 
+                        <img src="images/logout.png" alt="logout" style="width: 25px; heigth: 25px; margin-left: 5px;"> 
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 
     <br>
@@ -34,6 +42,7 @@
     <div class="container-fluid d-flex justify-content-center h-100 mx-0">
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
+            <!-- Данные должны выводиться из БД для удобства редактирования -->
             <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
                 <h2 class="titleText"> ПЕТРОВА НАТАЛЬЯ ВЛАДИМИРОВНА </h2>
                 <br>
@@ -42,25 +51,34 @@
                 <form method="POST" class="formSize d-flex flex-column align-items-center text-center">
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ФИО </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
+                    <!-- Дату рождения тоже желательно вывести сразу для наглядности, какая сейчас дата рождения стоит -->
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
-                        <p class="textInputModal"> ВОЗРАСТ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <p class="textInputModal"> ВОЗРАСТ(укажите дату рождения) </p> 
+                        <input type="date" class="inputModal" type="text">
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ТЕЛЕФОН </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
+
+                    
+                    <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
+                        <p class="textInputModal"> ФОТО </p> 
+                        <input type="file" class="inputModal">
+                    </div>
+
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ДОП. ТЕЛЕФОН (не обязательное поле) </p> 
-                        <textarea class="inputModal" type="text"> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
+
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ДОП. ТЕЛЕФОН (не обязательное поле) </p> 
-                        <textarea class="inputModal" type="text"> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
@@ -76,42 +94,42 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> АДРЕС ПРОЖИВАНИЯ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ПАСПОРТНЫЕ ДАННЫЕ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> АДРЕС ПРОПИСКИ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ДОП. КОНТАКТНЫЕ ДАННЫЕ</p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ОПЫТ РАБОТЫ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> С КАКИМИ ЗАБОЛЕВАНИЯМИ РАБОТАЛ(А) </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> НАВЫКИ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> СТАТУС СИДЕЛКИ </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Работает </option>
                             <option> Свободен(на) </option>
                         </select>
@@ -119,7 +137,7 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ЗНАНИЕ ЯЗЫКА </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Татарский </option>
                             <option> Башкирский </option>
                             <option> Дагестанский </option>
@@ -129,7 +147,7 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ВЕРОИСПОВЕДАНИЕ </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Христианство </option>
                             <option> Ислам </option>
                             <option> Иудаизм </option>
@@ -140,7 +158,7 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> НАЛИЧИЕ СПРАВОК О НЕСУДИМОСТИ </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Да </option>
                             <option> Нет </option>
                         </select>
@@ -148,7 +166,7 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> НАЛИЧИЕ САН.КНИЖКИ ИЛИ МЕД.СПРАВОК </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Да </option>
                             <option> Нет </option>
                         </select>
@@ -156,7 +174,7 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> НАЛИЧИЕ МЕД. ОБРАЗОВАНИЯ </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Да </option>
                             <option> Нет </option>
                         </select>
@@ -164,17 +182,17 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> БАНКОВКАЯ КАРТА </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ИНФОРМАЦИЯ О ПРОХОЖДЕНИИ КУРСОВ </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ВОЗМОЖНОСТЬ РАБОТЫ С ДЕТЬМИ </p> 
-                        <select class="inputModal" type="text" required>
+                        <select class="inputModal" type="text">
                             <option> Да </option>
                             <option> Нет </option>
                         </select>
@@ -182,8 +200,9 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ОТЗЫВ МЕНЕДЖЕРА </p> 
-                        <textarea class="inputModal" type="text" required> </textarea>
+                        <textarea class="inputModal" type="text">Данные с базы</textarea>
                     </div>
+
                     <br>
                     <div class="footer d-flex justify-content-center">
                         <button type="submit" class="btn btn-light-nurses-main"> РЕДАКТИРОВАТЬ </button>
