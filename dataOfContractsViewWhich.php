@@ -14,7 +14,7 @@
     <title> Просмотр данных договора </title>
 </head>
 <body>
-    <!-- ШАПКА -->
+      <!-- ШАПКА -->
     <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">&#9776;</span>
@@ -23,10 +23,10 @@
         <div class="collapse navbar-collapse w-100 " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center w-100 p-0 m-0">
                 <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfNurses.php"> СИДЕЛКИ </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ДОГОВОРЫ </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> АНАЛИТИКА </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> МЕНЕДЖЕРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link linkActive" href="dataOfContracts.php"> ДОГОВОРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="analytics.php"> АНАЛИТИКА </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfManagers.php"> МЕНЕДЖЕРЫ </a></li>
                 <li class="navbar-item-active d-flex justify-content-center"> 
                     <p class="d-flex align-items-center m-0"> Имя </p>
                     <a class="nav-link" href="login.php"> 
@@ -47,130 +47,130 @@
                 <br>
                 <hr class="hr-white">
 
-                    <table class="table table-hover">
-                        <tbody>
-                            <tr>
-                                <th scope="row th-width">НОМЕР ДОГОВОРА</th>
-                                <td>1</td>
-                            </tr>
+                <table class="table table-hover">
+                    <tbody>
+                        <tr>
+                            <th scope="row th-width">НОМЕР ДОГОВОРА</th>
+                            <td>1</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ФИО ЗАКАЗЧИКА</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ФИО ЗАКАЗЧИКА</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ПАСПОРТНЫЕ ДАННЫЕ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ПАСПОРТНЫЕ ДАННЫЕ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП.</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">СТЕПЕНЬ РОДСТВА М/У ЗАКАЗЧИКОМ И ПОДОП.</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ТЕЛЕФОН</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ТЕЛЕФОН</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ДОП. ДАННЫЕ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ДОП. ДАННЫЕ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ФИО ПОДОПЕЧНОГО</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ФИО ПОДОПЕЧНОГО</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ВОЗРАСТ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ВОЗРАСТ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ЗАБОЛЕВАНИЕ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ЗАБОЛЕВАНИЕ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ОСОБЕННОСТИ ПОДОП.</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ОСОБЕННОСТИ ПОДОП.</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">АДРЕС РАБОТЫ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">АДРЕС РАБОТЫ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">СРОК ДЕЙСТВИЯ ДОГОВОРА</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">СРОК ДЕЙСТВИЯ ДОГОВОРА</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ГРАФИК РАБОТЫ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ГРАФИК РАБОТЫ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ОБЩАЯ СУММА ДОГОВОРА</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ОБЩАЯ СУММА ДОГОВОРА</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ДОЛЯ ОФИСА</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ДОЛЯ ОФИСА</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">СПОСОБ ПОСТУПЛЕНИЯ ДЕНЕГ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">СПОСОБ ПОСТУПЛЕНИЯ ДЕНЕГ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ОБЩИЙ ТАРИФ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ОБЩИЙ ТАРИФ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ТАРИФ СДЕЛКИ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ТАРИФ СДЕЛКИ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ПРЕМИЯ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">ПРЕМИЯ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">КОЛ-ВО ПРЕМИАЛЬНЫХ ДНЕЙ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">КОЛ-ВО ПРЕМИАЛЬНЫХ ДНЕЙ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">МЕНЕДЖЕР</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">МЕНЕДЖЕР</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">СИДЕЛКА</th>
-                                <td>Одна или несколько в зависимости от заполненных данных
-                                    Данные вытащить из базы данных</td>
-                            </tr>
+                        <tr>
+                            <th scope="row th-width">СИДЕЛКА</th>
+                            <td>Одна или несколько в зависимости от заполненных данных
+                                Данные вытащить из базы данных</td>
+                        </tr>
 
-                            <tr>
-                                <th scope="row th-width">ОПЛАЧЕНО</th>
-                                <td>Данные вытащить из базы данных</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <tr>
+                            <th scope="row th-width">ОПЛАЧЕНО</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
+                    </tbody>
+                </table>
                 <hr class="hr-white">
                 <br>
             </div>
