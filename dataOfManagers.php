@@ -15,7 +15,7 @@
 </head>
 <body>
    <!-- ШАПКА -->
-   <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
+    <nav class="navbar navbar-expand-lg navbar w-100" style="background: white;">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon">&#9776;</span>
         </button>
@@ -23,10 +23,10 @@
         <div class="collapse navbar-collapse w-100 " id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto d-flex justify-content-center align-items-center w-100 p-0 m-0">
                 <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfNurses.php"> СИДЕЛКИ </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ДОГОВОРЫ </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> АНАЛИТИКА </a></li>
-                <li class="navbar-item-active text-center"> <a class="nav-link" href=""> МЕНЕДЖЕРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="dataOfContracts.php"> ДОГОВОРЫ </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="selectToolNurses.php"> ИНСТРУМЕНТ ПОДБОРА СИДЕЛОК </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link" href="analytics.php"> АНАЛИТИКА </a></li>
+                <li class="navbar-item-active text-center"> <a class="nav-link  linkActive" href="dataOfManagers.php"> МЕНЕДЖЕРЫ </a></li>
                 <li class="navbar-item-active d-flex justify-content-center"> 
                     <p class="d-flex align-items-center m-0"> Имя </p>
                     <a class="nav-link" href="login.php"> 
