@@ -64,6 +64,12 @@ a:hover
     border-bottom: 2px solid;
 }
 
+.linkActive
+{
+    color: black;
+    border-bottom: 2px solid;
+}
+
 .titleText 
 {
     font-size: 30px;
@@ -158,6 +164,7 @@ a:hover
     padding: 0;
 }
 
+
 .find-btn:hover
 {
     background: rgb(247, 231, 231);
@@ -181,11 +188,6 @@ a:hover
     text-decoration: none;
 }
 
-
-.name-of-nurses:hover
-{
-    text-decoration: underline;
-}
 
 
 .th-width
@@ -229,3 +231,97 @@ a:hover
     margin: 0;
     margin-right: 40px;
 }
+
+
+
+
+
+
+
+
+
+/*Медиа в ширину экрана от 350пх до 600пх, начало*/
+@media (min-width: 350px) and (max-width: 600px) {
+    .find-input {
+        width: 220px;
+        height: 60px;
+        padding-left: 20px;
+    }
+
+    .find-btn {
+        width: 80px;
+        height: 40px;
+        outline: none;
+        border-radius: 40px;
+        background: #F1FFE8;
+        padding: 0;
+    }
+
+    .inputModal {
+        width: 150px;
+        height: 50px;
+        margin-left: 10px;
+    }
+
+    .formSize {
+        width: 320px;
+    }
+
+    .textInputModal {
+        width: 150px;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .table th {
+        width: 100px;
+    }
+}
+/*Медиа в ширину экрана от 350пх до 600пх, конец*/
+
+
+
+
+/*Медиа в ширину экрана от 601пх до 991пх, начало*/
+@media (min-width: 601px) and (max-width: 991px) {
+    .find-input{
+        width: 400px;
+        height: 60px;
+        padding-left: 20px;
+    }
+
+    .find-btn{
+        width: 120px;
+        height: 60px;
+        outline: none;
+        border-radius: 40px;
+        background: #F1FFE8;
+        padding: 0;
+    }
+
+    .inputModal {
+        width: 200px;
+        height: 50px;
+    }
+
+    .formSize {
+        width: 400px;
+    }
+    .textInputModal {
+        width: 200px;
+        font-size: 16px;
+        font-weight: 600;
+        padding: 0;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .table th {
+        width: 150px;
+    }
+}
+/*Медиа в ширину экрана от 601пх до 991пх, конец*/
+
