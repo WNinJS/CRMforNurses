@@ -74,6 +74,8 @@ a:hover
 {
     font-size: 30px;
     font-weight: 600;
+    display: flex;
+    text-align: center;
 }
 
 .buttons-text-nurses-main 
@@ -279,6 +281,31 @@ a:hover
     .table th {
         width: 100px;
     }
+
+    .textProfile{
+        font-size: 22px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+    }
+
+    .profileText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .profileContent {
+        display: flex;
+        flex-direction: column!important;
+        align-items: center;  
+    }
+
+    .photoOfNurse {
+        padding: 0; 
+        margin: 0;  
+    }
 }
 /*Медиа в ширину экрана от 350пх до 600пх, конец*/
 
@@ -321,6 +348,20 @@ a:hover
 
     .table th {
         width: 150px;
+    }
+
+    .textProfile {
+        font-size: 22px;
+        font-weight: 400;
+        padding: 0;
+        margin: 0;
+        margin-right: 40px;
+    }
+
+    .profileContent {
+        display: flex;
+        flex-direction: column!important; 
+        align-items: center;  
     }
 }
 /*Медиа в ширину экрана от 601пх до 991пх, конец*/
