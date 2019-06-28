@@ -44,7 +44,7 @@
             <!-- Кнопки и их описание -->
             <!-- Данные должны выводиться из БД для удобства редактирования -->
             <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
-                <h2 class="titleText"> ПЕТРОВА НАТАЛЬЯ ВЛАДИМИРОВНА </h2>
+                <h2 class="titleText text-center"> ПЕТРОВА НАТАЛЬЯ ВЛАДИМИРОВНА </h2>
                 <br>
                 <hr class="hr-white">
                 <br>
