@@ -42,8 +42,8 @@
     <div class="container-fluid d-flex justify-content-center h-100 mx-0">
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
-            <div class="col-12 h-100 text-center">
-                <h2 class="titleText"> РЕДАКТИРОВАНИЕ ДАННЫХ О МЕНЕДЖЕРАХ</h2>
+            <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
+                <h2 class="titleText text-center"> РЕДАКТИРОВАНИЕ ДАННЫХ О МЕНЕДЖЕРАХ</h2>
                 
                 <br>
 
