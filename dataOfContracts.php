@@ -42,7 +42,7 @@
     <div class="container-fluid d-flex justify-content-center h-100 mx-0">
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
-            <div class="col-12 h-100 text-center">
+            <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
                 <div class="d-flex flex-row justify-content-center">
                     <button class="btn btn-light-nurses-main" onclick="goToViewContracts()">
                         <script type="text/javascript">
@@ -73,6 +73,20 @@
                 <br>
 
                 <div class="d-flex flex-row justify-content-center">
+                    <button class="btn btn-light-nurses-main" onclick="goToLongContracts()">
+                        <script type="text/javascript">
+                            function goToLongContracts() 
+                            { 
+                                location.href = "dataOfContractsLong.php" 
+                            }; 
+                        </script> 
+                        ПРОДОЛЖИТЬ ДОГОВОР
+                    </button>
+                </div>
+
+                <br>
+
+                <div class="d-flex flex-row justify-content-center">
                     <button class="btn btn-light-nurses-main" onclick="goToEditContracts()">
                         <script type="text/javascript">
                             function goToEditContracts() 
@@ -86,11 +100,6 @@
 
                 <br>
 
-                <div class="d-flex flex-row justify-content-around">
-                    <button class="btn btn-light-nurses-main">
-                        ЗАПОЛНИТЬ ДОГОВОР
-                    </button>
-                </div>   
             </div>
 
         </div>
