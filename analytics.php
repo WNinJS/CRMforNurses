@@ -43,7 +43,7 @@
     <div class="container-fluid d-flex justify-content-center h-100 mx-0">
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
-            <div class="col-12 h-100 text-center">
+            <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
                 <div class="d-flex flex-row justify-content-around align-items-center">
                     <button class="btn btn-light-nurses-main" data-toggle="modal" data-target="#generalProfitModal">
                         ОБЩАЯ ПРИБЫЛЬ ФИРМЫ
