@@ -43,7 +43,7 @@
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
             <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
-                <h2 class="titleText"> ДОГОВОР №1 </h2>
+                <h2 class="titleText text-center"> ДОГОВОР №1 </h2>
                 <br>
                 <hr class="hr-white">
                 <br>
@@ -104,11 +104,6 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
-                        <p class="textInputModal"> СРОК ДЕЙСТВИЯ ДОГОВОРА </p> 
-                        <textarea class="inputModal" type="text">Вытащить с базы</textarea>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ГРАФИК РАБОТЫ </p> 
                         <textarea class="inputModal" type="text">Вытащить с базы</textarea>
                     </div>
@@ -147,11 +142,6 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
-                        <p class="textInputModal"> КОЛ-ВО ПРЕМИАЛЬНЫХ ДНЕЙ(если есть) </p> 
-                        <textarea class="inputModal" type="text">Вытащить с базы</textarea>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ </p> 
                         <textarea class="inputModal" type="text">Вытащить с базы</textarea>
                     </div>
@@ -182,6 +172,11 @@
                         <textarea class="inputModal" type="text">Вытащить с базы</textarea>
                     </div>
 
+                    <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
+                        <p class="textInputModal"> ИСТОРИЯ ДОГОВОРА </p> 
+                        <textarea class="inputModal" type="text">Вытащить с базы</textarea>
+                    </div>
+
                     <br>
                     
                     <div class="footer d-flex justify-content-center">
@@ -206,6 +201,10 @@
         </button>
       </div>
       <div class="modal-body">
+        <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center text-center">
+            <p class="textInputModal"> ДАТА ОКОНЧАНИЯ </p> 
+             <input type="date" class="inputModal" type="text" required>
+        </div>
         <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center text-center">
             <p class="textInputModal"> СУММА К ВОЗВРАТУ(руб) </p> 
             <textarea class="inputModal" type="text" required></textarea>
