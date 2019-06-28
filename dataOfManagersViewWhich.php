@@ -43,7 +43,7 @@
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
             <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
-                <h2 class="titleText"> ЛОГИНОВ ИГОРЬ СЕРГЕИЧ </h2>
+                <h2 class="titleText text-center"> ЛОГИНОВ ИГОРЬ СЕРГЕИЧ </h2>
                 <br>
                 <hr class="hr-white">
                 <br>
