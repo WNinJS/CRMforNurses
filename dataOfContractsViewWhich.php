@@ -42,8 +42,8 @@
     <div class="container-fluid d-flex justify-content-center h-100 mx-0">
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
-            <div class="col-12 h-100 text-center">
-                <h2 class="titleText"> ДОГОВОР №1 </h2>
+            <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
+                <h2 class="titleText text-center"> ДОГОВОР №1 </h2>
                 <br>
                 <hr class="hr-white">
 
@@ -105,11 +105,6 @@
                         </tr>
 
                         <tr>
-                            <th scope="row th-width">СРОК ДЕЙСТВИЯ ДОГОВОРА</th>
-                            <td>Данные вытащить из базы данных</td>
-                        </tr>
-
-                        <tr>
                             <th scope="row th-width">ГРАФИК РАБОТЫ</th>
                             <td>Данные вытащить из базы данных</td>
                         </tr>
@@ -145,11 +140,6 @@
                         </tr>
 
                         <tr>
-                            <th scope="row th-width">КОЛ-ВО ПРЕМИАЛЬНЫХ ДНЕЙ</th>
-                            <td>Данные вытащить из базы данных</td>
-                        </tr>
-
-                        <tr>
                             <th scope="row th-width">СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ</th>
                             <td>Данные вытащить из базы данных</td>
                         </tr>
@@ -167,6 +157,11 @@
 
                         <tr>
                             <th scope="row th-width">ОПЛАЧЕНО</th>
+                            <td>Данные вытащить из базы данных</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row th-width">ИСТОРИЯ ДОГОВОРА</th>
                             <td>Данные вытащить из базы данных</td>
                         </tr>
                     </tbody>
