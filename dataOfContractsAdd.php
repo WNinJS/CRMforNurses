@@ -43,7 +43,7 @@
         <div class="row h-100 w-100">
             <!-- Кнопки и их описание -->
             <div class="col-12 h-100 text-center d-flex flex-column align-items-center">
-                <h2 class="titleText"> ДОБАВЛЕНИЕ ДОГОВОРА </h2>
+                <h2 class="titleText text-center"> ДОБАВЛЕНИЕ ДОГОВОРА </h2>
                 <br>
                 <hr class="hr-white">
                 <br>
@@ -105,8 +105,13 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
-                        <p class="textInputModal"> СРОК ДЕЙСТВИЯ ДОГОВОРА </p> 
-                        <textarea class="inputModal" type="text" required></textarea>
+                        <p class="textInputModal"> НАЧАЛО ДЕЙСТВИЯ ДОГОВОРА </p> 
+                        <input class="inputModal" type="date">
+                    </div>
+
+                    <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
+                        <p class="textInputModal"> ОКОНЧАНИЕ ДЕЙСТВИЯ ДОГОВОРА </p> 
+                        <input class="inputModal" type="date">
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
@@ -148,11 +153,6 @@
                     </div>
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
-                        <p class="textInputModal"> КОЛ-ВО ПРЕМИАЛЬНЫХ ДНЕЙ(если есть) </p> 
-                        <textarea class="inputModal" type="text">Вытащить с базы</textarea>
-                    </div>
-
-                    <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> СРЕДНИЙ ПРОЦЕНТ ПО ДОГОВОРУ </p> 
                         <textarea class="inputModal" type="text" required></textarea>
                     </div>
@@ -180,7 +180,10 @@
 
                     <div class="modalDivInputs d-flex flex-row justify-content-around align-items-center">
                         <p class="textInputModal"> ОПЛАЧЕНО </p> 
-                        <textarea class="inputModal" type="text" required></textarea>
+                        <select class="inputModal" type="text" required>
+                            <option>Да</option>
+                            <option>Нет</option>
+                        </select>
                     </div>
 
                     <br>
